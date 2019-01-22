@@ -204,7 +204,7 @@ public class mainForm extends javax.swing.JFrame {
     private void mainLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainLabelMouseClicked
         // TODO add your handling code here:
         JOptionPane.showMessageDialog(rootPane, "ພັບຈີຄລີນິກ ເວີຊັນທົດລອງ, ພັດທະນາໂດຍທ້າວພິລະພົນ ອິນທະວົງສາ ປີ 2019\n"
-                + "ຂໍ້ມູນເພີ່ມເຕີມທີ່ https://github.com/ArtyDev57/...", "ກ່ຽວກັບໂປຣແກຣມ", JOptionPane.INFORMATION_MESSAGE);
+                + "ຂໍ້ມູນເພີ່ມເຕີມທີ່ https://github.com/ArtyDev57/Clinic-System-Netbeans", "ກ່ຽວກັບໂປຣແກຣມ", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_mainLabelMouseClicked
 
     /**
