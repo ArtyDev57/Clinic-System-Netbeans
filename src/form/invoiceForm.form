@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="0"/>
+    <Property name="title" type="java.lang.String" value="&#xe9e;&#xeb1;&#xe9a;&#xe88;&#xeb5;&#xe84;&#xea5;&#xeb5;&#xe99;&#xeb4;&#xe81; - &#xe9c;&#xebb;&#xe99;&#xe81;&#xea7;&#xe94;&#xeaa;&#xeb8;&#xe82;&#xeb0;&#xe9e;&#xeb2;&#xe9a;"/>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowOpened" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowOpened"/>
+  </Events>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="separator" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="resultLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="resultComboBox" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="treatmentIDLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="treatmentIDComboBox" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="resultDateLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="resultDateField" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="resultIDLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Component id="resultIDField" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="resultCommentLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="resultPriceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="addButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="selectButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="editButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="deleteButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="refreshButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="reportButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="resultIssueButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="63" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="resultPriceField" max="32767" attributes="0"/>
+                          <Component id="resultCommentField" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="mainFormButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
+                      <Component id="invoiceLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="tableScrollPane" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="invoiceLabel" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                      <Component id="mainFormButton" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="resultIDLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="resultIDField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="resultDateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="resultDateField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="treatmentIDLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="treatmentIDComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="resultLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="resultComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="resultCommentLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="resultCommentField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="resultPriceLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="resultPriceField" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="addButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="selectButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="editButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="deleteButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="refreshButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="reportButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="resultIssueButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="separator" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="tableScrollPane" pref="118" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="invoiceLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="36" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xe9c;&#xebb;&#xe99;&#xe81;&#xeb2;&#xe99;&#xe81;&#xea7;&#xe94;&#xeaa;&#xeb8;&#xe82;&#xeb0;&#xe9e;&#xeb2;&#xe9a;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="mainFormButton">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/resources/home.png"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mainFormButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="resultIDLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xea5;&#xeb0;&#xeab;&#xeb1;&#xe94;&#xe9c;&#xebb;&#xe99;&#xe81;&#xea7;&#xe94;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="resultDateLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xec0;&#xea7;&#xea5;&#xeb2;&#xe9c;&#xebb;&#xe99;&#xe81;&#xea7;&#xe94;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="treatmentIDLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xea5;&#xeb0;&#xeab;&#xeb1;&#xe94;&#xe81;&#xeb2;&#xe99;&#xe81;&#xea7;&#xe94;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="resultLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xe9c;&#xebb;&#xe99;&#xe81;&#xeb2;&#xe99;&#xe81;&#xea7;&#xe94;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="resultCommentLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xe84;&#xeb3;&#xec0;&#xeab;&#xeb1;&#xe99;&#xe88;&#xeb2;&#xe81;&#xe97;&#xec8;&#xeb2;&#xe99;&#xedd;&#xecd;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="resultPriceLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xea5;&#xeb2;&#xe84;&#xeb2;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="resultCommentField">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="resultPriceField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="resultComboBox">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="&#xe9b;&#xebb;&#xe81;&#xe81;&#xeb0;&#xe95;&#xeb4;"/>
+            <StringItem index="1" value="&#xea1;&#xeb5;&#xe9a;&#xeb1;&#xe99;&#xeab;&#xeb2;&#xec0;&#xea5;&#xeb1;&#xe81;&#xe99;&#xec9;&#xead;&#xe8d;"/>
+            <StringItem index="2" value="&#xea1;&#xeb5;&#xe9a;&#xeb1;&#xe99;&#xeab;&#xeb2;&#xe9b;&#xeb2;&#xe99;&#xe81;&#xeb2;&#xe87;"/>
+            <StringItem index="3" value="&#xea1;&#xeb5;&#xe9a;&#xeb1;&#xe99;&#xeab;&#xeb2;&#xeae;&#xec9;&#xeb2;&#xe8d;&#xec1;&#xeae;&#xe87;"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="treatmentIDComboBox">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="treatmentIDComboBoxItemStateChanged"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JTextField" name="resultDateField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="resultIDField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="addButton">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xec0;&#xe9e;&#xeb5;&#xec8;&#xea1;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="selectButton">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xec0;&#xea5;&#xeb7;&#xead;&#xe81;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="selectButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="editButton">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xec1;&#xe81;&#xec9;&#xec4;&#xe82;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="deleteButton">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xea5;&#xebb;&#xe9a;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="refreshButton">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xec2;&#xeab;&#xebc;&#xe94;&#xec3;&#xedd;&#xec8;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="refreshButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="reportButton">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xea5;&#xeb2;&#xe8d;&#xe87;&#xeb2;&#xe99;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reportButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="resultIssueButton">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Phetsarath OT" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="&#xead;&#xead;&#xe81;&#xe9c;&#xebb;&#xe99;"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resultIssueButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JSeparator" name="separator">
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="tableScrollPane">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="resultTable">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Phetsarath OT" size="14" style="0"/>
+            </Property>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor" postCode="resultTable.getTableHeader().setFont(new java.awt.Font(&quot;Phetsarath OT&quot;, 0, 14));">
+              <Table columnCount="6" rowCount="4">
+                <Column editable="true" title="&#xea5;&#xeb0;&#xeab;&#xeb1;&#xe94;&#xe9c;&#xebb;&#xe99;&#xe81;&#xea7;&#xe94;" type="java.lang.Object"/>
+                <Column editable="true" title="&#xec0;&#xea7;&#xea5;&#xeb2;&#xe9c;&#xebb;&#xe99;&#xe81;&#xea7;&#xe94;" type="java.lang.Object"/>
+                <Column editable="true" title="&#xea5;&#xeb0;&#xeab;&#xeb1;&#xe94;&#xe81;&#xeb2;&#xe99;&#xe81;&#xea7;&#xe94;" type="java.lang.Object"/>
+                <Column editable="true" title="&#xe9c;&#xebb;&#xe99;&#xe81;&#xea7;&#xe94;" type="java.lang.Object"/>
+                <Column editable="true" title="&#xe84;&#xeb3;&#xec0;&#xeab;&#xeb1;&#xe99;" type="java.lang.Object"/>
+                <Column editable="true" title="&#xea5;&#xeb2;&#xe84;&#xeb2;" type="java.lang.Object"/>
+              </Table>
+            </Property>
+            <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+              <TableColumnModel selectionModel="0">
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                  <Title/>
+                  <Editor/>
+                  <Renderer/>
+                </Column>
+              </TableColumnModel>
+            </Property>
+            <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+              <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

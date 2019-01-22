@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="75e7849c-c126-463b-b589-4c0ee1d37826">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT tbMedicSale.bill_id, tbMedicSale.bill_date, tbMedicSale.customer_name, tbMedicSale.med_id, tbMedicStorage.med_name, tbMedicStorage.med_price, tbMedicSale.quantity, tbMedicSale.total_price FROM tbMedicSale INNER JOIN tbMedicStorage ON tbMedicSale.med_id = tbMedicStorage.med_id]]>
+	</queryString>
+	<field name="bill_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bill_date" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="customer_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="med_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="med_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="med_price" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="quantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total_price" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement x="231" y="0" width="105" height="40" uuid="c47d2c3e-1759-48f8-a986-f98647ed7670"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="24"/>
+				</textElement>
+				<text><![CDATA[ພັບຈີຄລີນິກ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="167" y="40" width="223" height="55" uuid="b8971f7f-58ae-4da5-a5e8-14bae8d889ac"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="36"/>
+				</textElement>
+				<text><![CDATA[ລາຍງານການຂາຍ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="218" splitType="Stretch">
+			<staticText>
+				<reportElement x="201" y="0" width="89" height="23" uuid="8b3f7f11-fde0-42d4-a471-ede5c9abb21b"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<text><![CDATA[ຊື່ລູກຄ້າ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="99" y="0" width="89" height="23" uuid="63a60f4d-109e-46f9-a1d4-a1122f25aaa6"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<text><![CDATA[ເວລາ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="89" height="23" uuid="1c15872c-c2d4-4e1c-8e42-6c424e562adb"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<text><![CDATA[ລະຫັດໃບເກັບເງິນ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="301" y="0" width="111" height="23" uuid="af4be505-172c-4c5c-9c72-be1c5b9b9b7e"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<text><![CDATA[ຢາ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="466" y="0" width="89" height="23" uuid="95785fcb-5bb6-4e99-ab31-301ba41d6e2e"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<text><![CDATA[ຍອດລວມ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="412" y="0" width="54" height="23" uuid="75967b51-1035-4ad5-80c5-2ca99d8de34d"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<text><![CDATA[ປະລິມານ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="99" y="40" width="89" height="23" uuid="586cc5fd-92eb-4974-8679-549b7e121563"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bill_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="40" width="89" height="23" uuid="84bf2130-5623-4131-b085-4dab28ec21c4"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-1" y="40" width="90" height="23" uuid="e75409e1-fb81-444f-af25-0c0666f5aae9"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bill_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="40" width="111" height="23" uuid="6780cc10-321c-4160-b90c-ad411ff3fd10"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{med_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="40" width="50" height="23" uuid="a0f0321c-2941-4d29-a57a-05d72c3559da"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="40" width="89" height="23" uuid="7c6371ab-fd9f-4e6d-a304-ea7f4349246e"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="99" y="75" width="89" height="23" uuid="cf645d8a-7f23-4121-a0fc-773ad7212a27"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bill_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="75" width="89" height="23" uuid="ad6528d7-ef95-4a3d-9087-6c9517441409"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-1" y="75" width="90" height="23" uuid="68897bcd-d71e-4518-9fdf-2cfae2c3ed4f"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bill_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="75" width="111" height="23" uuid="281ad157-2a40-430c-891e-69b1d22b2194"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{med_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="75" width="50" height="23" uuid="fc0caa2a-dfa7-45f6-84e1-14f5c788c1bb"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="75" width="89" height="23" uuid="70cad5ba-63c6-4d00-b38f-c328ee2eb83a"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="99" y="113" width="89" height="23" uuid="f4047fbf-a5e0-4450-80ad-30c6f1f4af9c"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bill_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="113" width="89" height="23" uuid="7d90e1fd-3452-4a45-91ab-f7e6f3aeaac7"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-1" y="113" width="90" height="23" uuid="928dc356-80a8-44a0-8138-fd1e78f4f05f"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bill_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="113" width="111" height="23" uuid="841912fd-9dc0-4cd3-9417-ac55458925fb"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{med_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="113" width="50" height="23" uuid="8e804385-6cd5-4355-b4f6-c4e554ce645a"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="113" width="89" height="23" uuid="d9973c15-1af0-42ea-9b13-c6f2421330ef"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="99" y="149" width="89" height="23" uuid="9a2f3627-9475-4830-b660-a33e919f6589"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bill_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="149" width="89" height="23" uuid="17332040-e424-4329-85e6-8e0412f102d6"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-1" y="149" width="90" height="23" uuid="0733632b-8519-41ef-9c78-9e492b243d17"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bill_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="149" width="111" height="23" uuid="3f8b8486-a8c6-4e0b-80fc-eb1940497ac3"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{med_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="149" width="50" height="23" uuid="7da35b78-03ef-4e27-85fb-69dc8a6cf8d3"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="149" width="89" height="23" uuid="738b736b-9754-446c-a007-4f0e6f04e90b"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="99" y="184" width="89" height="23" uuid="860475a7-a274-4b5e-a504-be0567d1cf10"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bill_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="184" width="89" height="23" uuid="a1393485-9dc3-46ec-b8a6-36e51188b95d"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-1" y="184" width="90" height="23" uuid="389996be-eb6f-490c-8482-8bffd3011ef4"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bill_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="301" y="184" width="111" height="23" uuid="e226f1ce-4962-4c8c-9e39-55e92a9725b6"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{med_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="184" width="50" height="23" uuid="53a43e6d-87e3-431a-b010-f339e984e92c"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="184" width="89" height="23" uuid="752763a5-dd63-44a9-b875-505c810cff4f"/>
+				<textElement>
+					<font fontName="Phetsarath OT" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total_price}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="32" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
