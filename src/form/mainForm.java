@@ -51,6 +51,7 @@ public class mainForm extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("ພັບຈີຄລີນິກ - ໜ້າຫຼັກ");
         setFont(new java.awt.Font("Phetsarath OT", 0, 14)); // NOI18N
+        setLocation(new java.awt.Point(300, 100));
         setPreferredSize(new java.awt.Dimension(640, 480));
         setResizable(false);
 

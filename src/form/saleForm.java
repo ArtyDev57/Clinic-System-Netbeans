@@ -81,6 +81,7 @@ public class saleForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("ພັບຈີຄລີນິກ - ພະແນກຂາຍຢາ");
+        setLocation(new java.awt.Point(300, 100));
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {

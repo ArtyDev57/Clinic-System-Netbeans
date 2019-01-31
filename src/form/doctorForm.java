@@ -80,7 +80,7 @@ public class doctorForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("ພັບຈີຄລີນິກ - ຫ້ອງກວດພະຍາດ");
-        setPreferredSize(new java.awt.Dimension(640, 580));
+        setLocation(new java.awt.Point(300, 100));
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
