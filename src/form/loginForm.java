@@ -46,7 +46,7 @@ public class loginForm extends javax.swing.JFrame {
         loginButton = new javax.swing.JButton();
         cancelButton = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
         idLabel.setFont(new java.awt.Font("Phetsarath OT", 0, 14)); // NOI18N
         idLabel.setText("ລະຫັດພະນັກງານ");
