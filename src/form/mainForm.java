@@ -190,8 +190,8 @@ public class mainForm extends javax.swing.JFrame {
 
     private void doctorFormButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doctorFormButtonActionPerformed
         // TODO add your handling code here:
-        doctorForm form = new doctorForm();
-        form.setVisible(true);
+        loginForm win = new loginForm();
+        win.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_doctorFormButtonActionPerformed
 

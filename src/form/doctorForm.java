@@ -32,14 +32,15 @@ public class doctorForm extends javax.swing.JFrame {
     uiManagement ui = new uiManagement();
     private DefaultTableModel model = new DefaultTableModel();
     private DefaultComboBoxModel symptom = new DefaultComboBoxModel();
-    private DefaultComboBoxModel doctor = new DefaultComboBoxModel();
+    private static String doctorID;
     
     public doctorForm() {
         initComponents();
         ui.setUI();
         model = (DefaultTableModel) doctorTable.getModel();
         symptom = (DefaultComboBoxModel) symptomComboBox.getModel();
-        doctor = (DefaultComboBoxModel) doctorIDComboBox.getModel();
+          
+        
     }
 
     /**
@@ -66,7 +67,6 @@ public class doctorForm extends javax.swing.JFrame {
         treatmentIDField = new javax.swing.JTextField();
         bloodTypeComboBox = new javax.swing.JComboBox<>();
         symptomComboBox = new javax.swing.JComboBox<>();
-        doctorIDComboBox = new javax.swing.JComboBox<>();
         addButton = new javax.swing.JButton();
         selectButton = new javax.swing.JButton();
         editButton = new javax.swing.JButton();
@@ -77,6 +77,7 @@ public class doctorForm extends javax.swing.JFrame {
         separator = new javax.swing.JSeparator();
         tableScrollPane = new javax.swing.JScrollPane();
         doctorTable = new javax.swing.JTable();
+        doctorIDField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("ພັບຈີຄລີນິກ - ຫ້ອງກວດພະຍາດ");
@@ -134,8 +135,6 @@ public class doctorForm extends javax.swing.JFrame {
         bloodTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "AB", "O" }));
 
         symptomComboBox.setFont(new java.awt.Font("Phetsarath OT", 0, 14)); // NOI18N
-
-        doctorIDComboBox.setFont(new java.awt.Font("Phetsarath OT", 0, 14)); // NOI18N
 
         addButton.setFont(new java.awt.Font("Phetsarath OT", 0, 14)); // NOI18N
         addButton.setText("ເພີ່ມ");
@@ -208,6 +207,9 @@ public class doctorForm extends javax.swing.JFrame {
         doctorTable.getTableHeader().setFont(new java.awt.Font("Phetsarath OT", 0, 14));
         tableScrollPane.setViewportView(doctorTable);
 
+        doctorIDField.setEditable(false);
+        doctorIDField.setText(receiveID());
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -240,6 +242,7 @@ public class doctorForm extends javax.swing.JFrame {
                                     .addComponent(treatmentIDField, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(patientLastNameField)
                                     .addComponent(bloodTypeComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(symptomComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(addButton)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -255,8 +258,7 @@ public class doctorForm extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(reportButton)
                                         .addGap(0, 53, Short.MAX_VALUE))
-                                    .addComponent(symptomComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(doctorIDComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                    .addComponent(doctorIDField))))
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
@@ -294,10 +296,10 @@ public class doctorForm extends javax.swing.JFrame {
                     .addComponent(symptomLabel)
                     .addComponent(symptomComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(doctorIDLabel)
-                    .addComponent(doctorIDComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(doctorIDField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addButton)
                     .addComponent(selectButton)
@@ -309,7 +311,7 @@ public class doctorForm extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(separator, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tableScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 174, Short.MAX_VALUE)
+                .addComponent(tableScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -354,13 +356,7 @@ public class doctorForm extends javax.swing.JFrame {
             rs.close();
             symptomComboBox.setModel(symptom);
             
-            sql = "call getDoctorName()";
-            rs = c.createStatement().executeQuery(sql);
-            while (rs.next()) {                
-                doctor.addElement(rs.getString("tbEmployee.em_firstName")+" "+rs.getString("tbEmployee.em_lastName"));
-            }
-            rs.close();
-            doctorIDComboBox.setModel(doctor);
+            
         } catch (SQLException e){
             e.printStackTrace();
         }
@@ -374,7 +370,7 @@ public class doctorForm extends javax.swing.JFrame {
         String symptomF = String.valueOf(symptomComboBox.getSelectedItem());
         String[] symptomArr = symptomF.split("\\s");
         String symptom = symptomArr[0];
-        String name = String.valueOf(doctorIDComboBox.getSelectedItem());
+        String name = String.valueOf(doctorIDField.getText());
         String[] nameArr = name.split("\\s");
         String doctorID = "";
         String doctorF = nameArr[0];
@@ -419,7 +415,7 @@ public class doctorForm extends javax.swing.JFrame {
             patientLastNameField.setText(String.valueOf(doctorTable.getValueAt(index, 3)));
             bloodTypeComboBox.setSelectedItem(String.valueOf(doctorTable.getValueAt(index, 4)));
             symptomComboBox.setSelectedItem(String.valueOf(doctorTable.getValueAt(index, 5)));
-            doctorIDComboBox.setSelectedItem(String.valueOf(doctorTable.getValueAt(index, 6)));
+            doctorIDField.setText(String.valueOf(doctorTable.getValueAt(index, 6)));
         } catch (ArrayIndexOutOfBoundsException e){
             JOptionPane.showMessageDialog(rootPane, "ກະລຸນາເລືອກຂໍ້ມູນໃນຕາຕະລາງ", "ຂໍ້ຜິດພາດ", JOptionPane.WARNING_MESSAGE);
         }
@@ -448,7 +444,7 @@ public class doctorForm extends javax.swing.JFrame {
         patientLastNameField.setText("");
         bloodTypeComboBox.setSelectedIndex(-1);
         symptomComboBox.setSelectedIndex(-1);
-        doctorIDComboBox.setSelectedIndex(-1);
+        doctorIDField.setText(receiveID());
     }//GEN-LAST:event_clearButtonActionPerformed
 
     private void reportButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportButtonActionPerformed
@@ -465,6 +461,12 @@ public class doctorForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_reportButtonActionPerformed
 
+    public String receiveID(){
+        loginForm win = new loginForm();
+        String id = win.sendID();
+        return id;
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -506,7 +508,7 @@ public class doctorForm extends javax.swing.JFrame {
     private javax.swing.JLabel bloodTypeLabel;
     private javax.swing.JButton clearButton;
     private javax.swing.JButton deleteButton;
-    private javax.swing.JComboBox<String> doctorIDComboBox;
+    private javax.swing.JTextField doctorIDField;
     private javax.swing.JLabel doctorIDLabel;
     private javax.swing.JLabel doctorLabel;
     private javax.swing.JTable doctorTable;
